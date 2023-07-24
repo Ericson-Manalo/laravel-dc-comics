@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="m-3">
-                Admin Pokemon Index Panel
+                Comic's List
             </h1>
         </div>
     </div>
