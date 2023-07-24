@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="m-3">
+            <h1 class="m-3 text-center text-white">
                 Comic's List
             </h1>
         </div>
@@ -38,7 +38,7 @@
                                 {{ $comic['description']  }}
                             </td>
                             <td>
-                                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" class="h-25">
+                                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" id="comic_img">
                             </td>
                             <td>
                                 {{ $comic['price']  }}
@@ -47,12 +47,9 @@
                                 {{ $comic['series']  }}
                             </td>
                             <td>
-                                <a class="btn btn-sm btn-primary me-2"
-                                    href="">
-                                    View
-                                </a>
-                                <a class="btn btn-sm btn-success me-2">Edit</a>
-                                <a class="btn btn-sm btn-warning me-2">Delete</a>
+                            <a href=" {{ route('admin.comics.show', $comic -> id) }} ">
+                            {{$comic["id"]}} {{$comic["title"]}}
+                            </a>
                             </td>
 
                         </tr>
@@ -61,6 +58,7 @@
             </table>
         </div>
     </div>
+
 
 
 </div>
