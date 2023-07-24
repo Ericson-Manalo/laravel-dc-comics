@@ -48,7 +48,7 @@
                             </td>
                             <td>
                             <a href=" {{ route('admin.comics.show', $comic -> id) }} ">
-                            {{$comic["id"]}} {{$comic["title"]}}
+                            See more
                             </a>
                             </td>
 
