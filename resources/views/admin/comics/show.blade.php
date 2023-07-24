@@ -11,7 +11,7 @@
             </h1>
         </div>
     </div>
-    <div class="row pokemons justify-content-around text-center">
+    <div class="row pokemons justify-content-around text-center p-4">
         <article class="card col-12 p-0 m-3">
 
             <img src="{{ $comic['thumb'] }}" class="card-img-top w-25 p-3 m-auto" alt="{{ $comic['title'] }}">
