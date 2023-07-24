@@ -52,8 +52,9 @@ class ComicController extends Controller
     public function show($id)
     {
         //
+        $navbarLinks = config('db.navbarLinks');
         $comic = Comic::findOrFail($id);
-        return view('admin.comics.show', compact('comic'));
+        return view('admin.comics.show', compact('comic', 'navbarLinks'));
     }
 
     /**
