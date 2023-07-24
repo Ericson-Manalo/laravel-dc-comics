@@ -14,7 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        return view('admin.comics.index');
+
+        $navbarLinks = config('db.navbarLinks');
+        return view('admin.comics.index', compact('navbarLinks'));
     }
 
     /**
