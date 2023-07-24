@@ -17,7 +17,7 @@ class ComicSeeder extends Seeder
         //
 
         return [
-
+            'comicList'=>[
             [
         
                 "title" => "Action Comics #1000: The Deluxe Edition",
@@ -420,7 +420,15 @@ class ComicSeeder extends Seeder
                 ],
         
             ],
+        ]
         
         ];
+
+        foreach ($comicList as $comic){
+            $newComic = new Comic();
+            $newComic->title = $comic['title'];
+            $newComic->save(); 
+
+        }
     }
 }

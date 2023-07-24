@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -16,7 +17,9 @@ class ComicController extends Controller
     {
 
         $navbarLinks = config('db.navbarLinks');
-        return view('admin.comics.index', compact('navbarLinks'));
+
+        $comicList = Comic::all();
+        return view('admin.comics.index', compact('navbarLinks', 'comicList'));
     }
 
     /**
