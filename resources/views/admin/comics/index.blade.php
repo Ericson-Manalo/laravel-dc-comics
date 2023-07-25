@@ -56,6 +56,14 @@
                     @endforeach
                 </tbody>
             </table>
+
+            <div>
+            <button type="button" class="btn btn-secondary m-auto">
+                <a href="{{route('admin.comics.create')}}">
+                    Create a new Comic
+                </a>
+            </button>
+            </div>
         </div>
     </div>
 
