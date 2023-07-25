@@ -30,7 +30,9 @@ class ComicController extends Controller
     public function create()
     {
         //
-        return 'ciao';
+        $navbarLinks = config('db.navbarLinks');
+
+        return view('admin.comics.create', compact('navbarLinks'));
     }
 
     /**
