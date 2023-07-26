@@ -48,7 +48,8 @@
                             </td>
                             <td>
                             <a href=" {{ route('admin.comics.show', $comic -> id) }} ">
-                                <span class="badge rounded-pill text-bg-primary">
+
+                            <span class="badge rounded-pill text-bg-primary">
                                     See more
                                 </span>
                             </a>
@@ -59,11 +60,18 @@
                                 </span>
                             </a>
 
-                            <a href="">
-                                <span class="badge rounded-pill text-bg-warning">
+                            <form action="{{route('admin.comics.destroy', $comic->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+
+                                
+                                <button type="submit" class="badge rounded-pill text-bg-warning">
                                     Delete
-                                </span>
-                            </a>
+                                </button>
+
+
+                            </form>
+                            
 
                             </td>
 
