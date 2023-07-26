@@ -97,11 +97,20 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
         $data = $request->all();
-        $comic->update($data);
+
+        $comic = Comic::findOrFail($id);
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = $data['thumb'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->type = $data['type'];
+        $comic->save();
 
         return redirect()->route('admin.comics.show', $comic->id);
+
 
     }
 
