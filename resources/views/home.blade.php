@@ -29,7 +29,9 @@
 
     <div class="load-btn">
         <p class="load-more">
-            LOAD MORE
+            <a href="{{route('admin.comics.index')}}">
+                SEE MORE
+            </a>
         </p>
     </div>
 
