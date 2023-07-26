@@ -48,7 +48,7 @@
                             </td>
                             <td>
                             <a href=" {{ route('admin.comics.show', $comic -> id) }} ">
-                            See more
+                            See more about this comic
                             </a>
                             </td>
 
@@ -58,7 +58,7 @@
             </table>
 
             <div>
-            <button type="button" class="btn btn-secondary m-auto">
+            <button type="button" class="btn btn-secondary m-auto d-flex justify-content-center mb-2 bg-white">
                 <a href="{{route('admin.comics.create')}}">
                     Create a new Comic
                 </a>
