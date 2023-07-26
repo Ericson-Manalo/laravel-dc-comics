@@ -48,8 +48,23 @@
                             </td>
                             <td>
                             <a href=" {{ route('admin.comics.show', $comic -> id) }} ">
-                            See more about this comic
+                                <span class="badge rounded-pill text-bg-primary">
+                                    See more
+                                </span>
                             </a>
+
+                            <a href="{{route('admin.comics.edit', $comic->id)}}">
+                                <span class="badge rounded-pill text-bg-success">
+                                    Edit
+                                </span>
+                            </a>
+
+                            <a href="">
+                                <span class="badge rounded-pill text-bg-warning">
+                                    Delete
+                                </span>
+                            </a>
+
                             </td>
 
                         </tr>
