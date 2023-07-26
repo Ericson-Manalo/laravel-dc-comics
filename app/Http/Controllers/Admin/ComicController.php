@@ -58,8 +58,6 @@ class ComicController extends Controller
 
         return redirect()->route('admin.comics.show', $newComic->id);
 
-
-
     }
 
     /**
@@ -85,6 +83,9 @@ class ComicController extends Controller
     public function edit($id)
     {
         //
+        $comic = Comic::findOrFail($id);
+        $navbarLinks = config('db.navbarLinks');
+        return view('admin.comics.edit', compact('comic', 'navbarLinks'));
     }
 
     /**
